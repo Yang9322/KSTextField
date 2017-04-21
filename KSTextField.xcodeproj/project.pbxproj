@@ -15,6 +15,9 @@
 		3BCC8CAF1EAA050E00039630 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BCC8CAD1EAA050E00039630 /* LaunchScreen.storyboard */; };
 		3BCC8CBA1EAA050E00039630 /* KSTextFieldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC8CB91EAA050E00039630 /* KSTextFieldTests.m */; };
 		3BCC8CC51EAA050E00039630 /* KSTextFieldUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC8CC41EAA050E00039630 /* KSTextFieldUITests.m */; };
+		3BCC8CD71EAA051F00039630 /* KSCustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC8CD41EAA051F00039630 /* KSCustomTextField.m */; };
+		3BCC8CD81EAA051F00039630 /* KSKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC8CD61EAA051F00039630 /* KSKeyboard.m */; };
+		3BCC8CDB1EAA058900039630 /* UIView+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC8CDA1EAA058900039630 /* UIView+Utility.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,12 @@
 		3BCC8CC01EAA050E00039630 /* KSTextFieldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KSTextFieldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BCC8CC41EAA050E00039630 /* KSTextFieldUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSTextFieldUITests.m; sourceTree = "<group>"; };
 		3BCC8CC61EAA050E00039630 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BCC8CD31EAA051F00039630 /* KSCustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSCustomTextField.h; sourceTree = "<group>"; };
+		3BCC8CD41EAA051F00039630 /* KSCustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSCustomTextField.m; sourceTree = "<group>"; };
+		3BCC8CD51EAA051F00039630 /* KSKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSKeyboard.h; sourceTree = "<group>"; };
+		3BCC8CD61EAA051F00039630 /* KSKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSKeyboard.m; sourceTree = "<group>"; };
+		3BCC8CD91EAA058900039630 /* UIView+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utility.h"; sourceTree = "<group>"; };
+		3BCC8CDA1EAA058900039630 /* UIView+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utility.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +115,7 @@
 				3BCC8CA51EAA050E00039630 /* ViewController.h */,
 				3BCC8CA61EAA050E00039630 /* ViewController.m */,
 				3BCC8CA81EAA050E00039630 /* Main.storyboard */,
+				3BCC8CD21EAA051F00039630 /* KSKeyboard */,
 				3BCC8CAB1EAA050E00039630 /* Assets.xcassets */,
 				3BCC8CAD1EAA050E00039630 /* LaunchScreen.storyboard */,
 				3BCC8CB01EAA050E00039630 /* Info.plist */,
@@ -138,6 +148,19 @@
 				3BCC8CC61EAA050E00039630 /* Info.plist */,
 			);
 			path = KSTextFieldUITests;
+			sourceTree = "<group>";
+		};
+		3BCC8CD21EAA051F00039630 /* KSKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				3BCC8CD31EAA051F00039630 /* KSCustomTextField.h */,
+				3BCC8CD41EAA051F00039630 /* KSCustomTextField.m */,
+				3BCC8CD51EAA051F00039630 /* KSKeyboard.h */,
+				3BCC8CD61EAA051F00039630 /* KSKeyboard.m */,
+				3BCC8CD91EAA058900039630 /* UIView+Utility.h */,
+				3BCC8CDA1EAA058900039630 /* UIView+Utility.m */,
+			);
+			path = KSKeyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,9 +296,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BCC8CD71EAA051F00039630 /* KSCustomTextField.m in Sources */,
+				3BCC8CDB1EAA058900039630 /* UIView+Utility.m in Sources */,
 				3BCC8CA71EAA050E00039630 /* ViewController.m in Sources */,
 				3BCC8CA41EAA050E00039630 /* AppDelegate.m in Sources */,
 				3BCC8CA11EAA050E00039630 /* main.m in Sources */,
+				3BCC8CD81EAA051F00039630 /* KSKeyboard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
