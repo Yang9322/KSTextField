@@ -18,7 +18,16 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        _keyboard = [[KSKeyboard alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 400)];
+        _keyboard = [[KSKeyboard alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 224)];
+        _keyboard.delegate = self;
+        self.inputView = _keyboard;
+    }
+    return self;
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    if (self = [super initWithCoder:aDecoder]) {
+        _keyboard = [[KSKeyboard alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 224)];
         _keyboard.delegate = self;
         self.inputView = _keyboard;
     }
@@ -36,6 +45,15 @@
 #pragma mark - Private Method
 
 #pragma mark - Setter&Getter
+- (void)setOptions:(CustomTextFileOptions)options {
+    _options = options;
+    if (options & CustomTextFileOptionsDecaimalPoint) {
+        _keyboard.shouldHaveDecimalPointButton = YES;
+    }
+    if (options & CustomTextFileOptionsDone) {
+        _keyboard.shouldHaveDoneButton = YES;
+    }
+}
 
 #pragma mark - External Delegate
 

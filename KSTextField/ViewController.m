@@ -7,8 +7,9 @@
 //
 
 #import "ViewController.h"
-
-@interface ViewController ()
+#import "KSCustomTextField.h"
+@interface ViewController ()<UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet KSCustomTextField *textField;
 
 @end
 
@@ -16,14 +17,52 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldTextDidChangeNotification) name:UITextFieldTextDidChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldTextDidEndEditingNotification) name:UITextFieldTextDidEndEditingNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldTextDidBeginEditingNotification) name:UITextFieldTextDidBeginEditingNotification object:nil];
+
+    _textField.delegate = self;
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+
+//V
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    return YES;
+}
+//V
+- (void)textFieldDidBeginEditing:(UITextField *)textField{
+    
+}
+//V
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField{
+    return YES;
+}
+
+//V
+- (void)textFieldDidEndEditing:(UITextField *)textField{
+    
+}
+
+//V
+- (void)textFieldTextDidEndEditingNotification {
+    
+}
+
+//V
+- (void)textFieldTextDidBeginEditingNotification {
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)buttonClicked:(id)sender {
+    [self.view endEditing:YES];
+    
+}
 
 @end

@@ -11,6 +11,7 @@
 @protocol KSKeyboardProtocol <NSObject>
 
 @optional
+
 - (void)textDidChange:(NSString *)text;
 
 - (void)textDidFinishEditing:(NSString *)text;
@@ -20,6 +21,10 @@
 @interface KSKeyboard : UIView
 
 @property (nonatomic, weak)id <KSKeyboardProtocol>delegate;
+
+@property (nonatomic, assign)BOOL shouldHaveDecimalPointButton;
+
+@property (nonatomic, assign)BOOL shouldHaveDoneButton;
 
 - (void)show;
 
