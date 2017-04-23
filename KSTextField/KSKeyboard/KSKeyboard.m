@@ -33,8 +33,8 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        [self initSubviews];
         self.backgroundColor = [UIColor whiteColor];
+        [self initSubviews];
         _buttonWidth = [UIScreen mainScreen].bounds.size.width / HORIZONVIEWCOUNT;
         _buttonHeight = 56;
         _text = @"".mutableCopy;
@@ -44,18 +44,6 @@
 
 - (void)dealloc {
     NSLog(@"%@-释放了",self.class);
-}
-
-- (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size {
-    if (!color || size.width <= 0 || size.height <= 0) return nil;
-    CGRect rect = CGRectMake(0.0f, 0.0f, size.width, size.height);
-    UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetFillColorWithColor(context, color.CGColor);
-    CGContextFillRect(context, rect);
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return image;
 }
 
 #pragma mark - Intial Methods
@@ -222,6 +210,19 @@
         }
     }
     [super layoutSubviews];
+}
+
+
+- (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size {
+    if (!color || size.width <= 0 || size.height <= 0) return nil;
+    CGRect rect = CGRectMake(0.0f, 0.0f, size.width, size.height);
+    UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, color.CGColor);
+    CGContextFillRect(context, rect);
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
 }
 
 #pragma mark - Setter&Getter

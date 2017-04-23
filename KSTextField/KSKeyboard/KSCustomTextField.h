@@ -15,9 +15,11 @@ typedef NS_OPTIONS(NSUInteger, CustomTextFileOptions) {
 };
 
 @class KSCustomTextField;
+
 @protocol KSCustomTextFieldProtocol <NSObject>
 
 @optional
+
 - (void)textFieldDidChanged:(KSCustomTextField *)textField;
 
 @end
