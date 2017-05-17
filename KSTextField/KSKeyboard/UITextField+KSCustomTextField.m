@@ -19,7 +19,7 @@ static char textChangeToken;
 - (void)setIsCustomAppearance:(BOOL)isCustomAppearance {
     objc_setAssociatedObject(self, &isCustomAppearanceToken, @(isCustomAppearance), OBJC_ASSOCIATION_ASSIGN);
     if (self.isCustomAppearance) {
-        self.keyboard = [[KSKeyboard alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 400)];
+        self.keyboard = [[KSKeyboard alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 224)];
         self.keyboard.textField = self;
         self.inputView = self.keyboard;
     }
