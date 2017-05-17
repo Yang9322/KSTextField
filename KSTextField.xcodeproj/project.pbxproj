@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B4D97E41ECC478400103F46 /* UITextField+KSCustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4D97E31ECC478400103F46 /* UITextField+KSCustomTextField.m */; };
 		3BCC8CA11EAA050E00039630 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC8CA01EAA050E00039630 /* main.m */; };
 		3BCC8CA41EAA050E00039630 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC8CA31EAA050E00039630 /* AppDelegate.m */; };
 		3BCC8CA71EAA050E00039630 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC8CA61EAA050E00039630 /* ViewController.m */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B4D97E21ECC478400103F46 /* UITextField+KSCustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+KSCustomTextField.h"; sourceTree = "<group>"; };
+		3B4D97E31ECC478400103F46 /* UITextField+KSCustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+KSCustomTextField.m"; sourceTree = "<group>"; };
 		3BCC8C9C1EAA050E00039630 /* KSTextField.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KSTextField.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BCC8CA01EAA050E00039630 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3BCC8CA21EAA050E00039630 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -159,6 +162,8 @@
 				3BCC8CD61EAA051F00039630 /* KSKeyboard.m */,
 				3BCC8CD91EAA058900039630 /* UIView+Utility.h */,
 				3BCC8CDA1EAA058900039630 /* UIView+Utility.m */,
+				3B4D97E21ECC478400103F46 /* UITextField+KSCustomTextField.h */,
+				3B4D97E31ECC478400103F46 /* UITextField+KSCustomTextField.m */,
 			);
 			path = KSKeyboard;
 			sourceTree = "<group>";
@@ -230,12 +235,10 @@
 				TargetAttributes = {
 					3BCC8C9B1EAA050E00039630 = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = 5B9FU4LA3B;
 						ProvisioningStyle = Automatic;
 					};
 					3BCC8CB41EAA050E00039630 = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = 5B9FU4LA3B;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 3BCC8C9B1EAA050E00039630;
 					};
@@ -304,6 +307,7 @@
 				3BCC8CA41EAA050E00039630 /* AppDelegate.m in Sources */,
 				3BCC8CA11EAA050E00039630 /* main.m in Sources */,
 				3BCC8CD81EAA051F00039630 /* KSKeyboard.m in Sources */,
+				3B4D97E41ECC478400103F46 /* UITextField+KSCustomTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,13 +458,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5B9FU4LA3B;
 				INFOPLIST_FILE = KSTextField/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lalaland.KSTextField;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -468,13 +469,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5B9FU4LA3B;
 				INFOPLIST_FILE = KSTextField/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lalaland.KSTextField;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -482,7 +480,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 5B9FU4LA3B;
 				INFOPLIST_FILE = KSTextFieldTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lalaland.KSTextFieldTests;
@@ -495,7 +492,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 5B9FU4LA3B;
 				INFOPLIST_FILE = KSTextFieldTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lalaland.KSTextFieldTests;

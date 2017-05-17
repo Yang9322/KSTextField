@@ -7,19 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
-typedef NS_OPTIONS(NSUInteger, CustomTextFileOptions) {
-    CustomTextFileOptionsDefault = 1 << 0,
-    CustomTextFileOptionsDecaimalPoint = 1 << 1,
-    CustomTextFileOptionsDone = 1 << 2,
-};
-
 @class KSCustomTextField;
-
 @protocol KSCustomTextFieldProtocol <NSObject>
 
 @optional
-
 - (void)textFieldDidChanged:(KSCustomTextField *)textField;
 
 @end
@@ -27,7 +18,5 @@ typedef NS_OPTIONS(NSUInteger, CustomTextFileOptions) {
 @interface KSCustomTextField : UITextField
 
 @property (nonatomic, weak)id <KSCustomTextFieldProtocol>textFieldDelegate;
-
-@property (nonatomic, assign)CustomTextFileOptions options;
 
 @end

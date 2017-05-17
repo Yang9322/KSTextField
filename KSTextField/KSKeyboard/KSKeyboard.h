@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+typedef void(^TextDidChangeBlock)(NSString *text);
+typedef void(^TextFieldDidFinishEditingBlock)(NSString *text);
+
 
 @protocol KSKeyboardProtocol <NSObject>
 
 @optional
-
 - (void)textDidChange:(NSString *)text;
 
 - (void)textDidFinishEditing:(NSString *)text;
@@ -22,9 +24,11 @@
 
 @property (nonatomic, weak)id <KSKeyboardProtocol>delegate;
 
-@property (nonatomic, assign)BOOL shouldHaveDecimalPointButton;
+@property (nonatomic, weak)UITextField *textField;
 
-@property (nonatomic, assign)BOOL shouldHaveDoneButton;
+@property (nonatomic, copy) TextDidChangeBlock textChangeBlock;
+
+@property (nonatomic, copy) TextFieldDidFinishEditingBlock endEditingBlock;
 
 - (void)show;
 
